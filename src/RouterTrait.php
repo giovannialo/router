@@ -59,7 +59,7 @@ trait RouterTrait
 	{
 		foreach ($this->routes as $httpVerb) {
 			foreach ($httpVerb as $routeItem) {
-				if (!empty($routeItem['name']) && $routeItem['name'] === $name) {
+				if (!empty($routeItem['name']) && $routeItem['name'] === $name && $routeItem['route'] !== '') {
 					return $this->treat($routeItem, $data);
 				}
 			}
